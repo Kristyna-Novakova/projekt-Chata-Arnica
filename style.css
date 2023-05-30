@@ -6,6 +6,12 @@
   --text: #1f2403;
 }
 
+:root[data-theme='dark'] {
+  --background-primary: #132221;
+  --background-secondary: #476462;
+  --text: #e1e1e1;
+}
+
 /* ZÁKLADNÍ STYLY */
 
 *,
@@ -184,8 +190,108 @@ span {
 }
 
 /* SEM ZAČNĚTE PSÁT SVÉ STYLY PRO MOBIL */
+@media (min-width: 350px) {
+
+  body {
+    color: var(--text);
+    font: "Alegreya Sans", sans-serif;
+  }
+
+  /* HLAVIČKA */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-secondary);
+  }
+
+  nav a {
+    color: var(--text);
+  }
+
+  .page-header .logo {
+    font: "Dawning of a New Day";
+    font-style: italic;
+  }
+
+  .pitch {
+    background-color: var(--background-secondary);
+  }
+
+  .pitch p {
+    font: "Lora", serif;
+    text-align: center;
+
+  }
+
+
+  /* HLAVNÍ TEXT */
+  .subheading {
+    background-color: var(--background-primary);
+  }
+
+
+  .subheading__content {
+    max-width: 800px;
+    text-align: center;
+  }
+
+
+  /* HLAVNÍ FOTKA */
+  .intro-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro-image img {
+    height: 70%;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* CENÍK */
+
+  #pricelist {
+    background-color: var(--background-secondary);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .offer {
+    width: 80%;
+    max-width: 270px;
+  }
+
+
+  /* RECENZE */
+  .review {
+    background-color: var(--background-primary);
+
+  }
+
+  .review__content {
+    border: 2px solid var(--background-secondary);
+  }
+
+  .review__text {
+    font-style: oblique;
+  }
+
+
+  /* PATIČKA */
+
+  .footer {
+    background-color: var(--background-secondary);
+  }
+}
+
+
+
+/* DESKTOP */
 
 @media (min-width: 840px) {
+
   /* HLAVIČKA - NAVIGACE */
   .page-header {
     padding: 2rem 4rem;
@@ -213,12 +319,50 @@ span {
     font-size: 1.75rem;
   }
 
+  /* CENÍK */
+  .pricelist__content {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
   /* RECENZE */
+  .review__content {
+    position: relative;
+    border: none;
+  }
+
+  .review__photo {
+    background-image: url('../images/reviewer.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 300px;
+  }
+
 
   .review__text {
     width: 250px;
     padding: 1.5rem;
+    background-color: var(--background-secondary);
+    transform: translateX(60px);
   }
 
-  /* TADY PIŠTE STYLY PRO ŠÍŘKU NAD 800PX */
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+}
+
+/* TADY PIŠTE STYLY PRO ŠÍŘKU NAD 1200PX */
+@media (min-width: 840px) {
+  .pricelist__content {
+    gap: 6rem;
+  }
+
+  .footer {
+    gap: 6rem;
+  }
 }
