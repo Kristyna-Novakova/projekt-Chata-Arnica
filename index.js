@@ -4,6 +4,19 @@ const toggleSwitch = document.querySelector(
   '.theme-switch input[type="checkbox"]',
 );
 
+// Získání theme z Local Storage
+const currentTheme = localStorage.getItem('theme')
+  ? localStorage.getItem('theme')
+  : null;
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+}
+
 const switchTheme = (e) => {
   if (e.target.checked) {
     document.documentElement.setAttribute('data-theme', 'dark');
