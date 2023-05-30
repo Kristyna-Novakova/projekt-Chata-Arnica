@@ -326,7 +326,7 @@ body {
   } */
 
   .review__photo {
-    background-image: url('./images/reviewer.jpg');
+    background-image: url(./images/reviewer.jpg);
     background-size: cover;
     background-position: center;
     height: 400px;
