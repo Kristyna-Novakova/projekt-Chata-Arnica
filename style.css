@@ -237,7 +237,7 @@ body {
 }
 
 .intro-image {
-  background-image: url("../images/arnica-intro.jpg");
+  background-image: url("./images/arnica-intro.jpg");
   height: 70vh;
   background-position: center;
   background-size: cover;
@@ -326,7 +326,7 @@ body {
   } */
 
   .review__photo {
-    background-image: url("../images/reviewer.jpg");
+    background-image: url("./images/reviewer.jpg");
     background-size: cover;
     background-position: center;
     height: 400px;
